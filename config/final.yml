@@ -1,1 +1,5 @@
-name: geode
+---
+blobstore:
+  provider: gcs
+  options:
+    bucket_name: eitan-bosh-blobstore
