@@ -16,7 +16,7 @@ case $1 in
     source /var/vcap/packages/apache-geode/bosh/runtime.env
 
     chpst -u vcap:vcap gfsh start server \
-      --name=cacheserver<%=spec.index%>
+      --name=cacheserver<%=spec.index%> \
       --dir=$RUN_DIR \
       --properties-file=config/gemfire.properties
 

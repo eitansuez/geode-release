@@ -3,7 +3,7 @@ name: geode
 
 releases:
 - name: geode
-  version: 0.0.1
+  version: latest
   #url: git+https://github.com/eitansuez/geode-release
 
 stemcells:
