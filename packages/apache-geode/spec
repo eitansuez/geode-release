@@ -5,3 +5,4 @@ dependencies: []
 
 files:
 - apache-geode-1.6.0.tgz
+- runtime.env
