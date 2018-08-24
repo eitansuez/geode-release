@@ -1,5 +1,5 @@
 ---
-name: geode
+final_name: geode
 blobstore:
   provider: gcs
   options:
