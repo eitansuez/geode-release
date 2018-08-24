@@ -1,0 +1,5 @@
+set -e
+
+tar -xzf apache-geode-*.tgz
+cp -a ./apache-geode-*/* ${BOSH_INSTALL_TARGET}
+

@@ -1,0 +1,7 @@
+---
+name: apache-geode
+
+dependencies: []
+
+files:
+- apache-geode-1.6.0.tgz
