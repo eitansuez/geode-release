@@ -1,1 +1,2 @@
 locators=<%= link('locator_info').instances.map { |instance| instance.address + '[10334]' }.join(',') %>
+log-file=/var/vcap/sys/log/cacheserver/cacheserver<%=spec.index%>.log
