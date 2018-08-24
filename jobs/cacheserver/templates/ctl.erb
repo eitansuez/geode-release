@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+RUN_DIR=/var/vcap/sys/run/cacheserver
+LOG_DIR=/var/vcap/sys/log/cacheserver
+PIDFILE=$RUN_DIR/vf.gf.server.pid
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR $LOG_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR
+
+    source /var/vcap/packages/openjdk-8/bosh/runtime.env
+    source /var/vcap/packages/apache-geode/bosh/runtime.env
+
+    chpst -u vcap:vcap gfsh start server \
+      --name=cacheserver<%=spec.index%>
+      --dir=$RUN_DIR \
+      --properties-file=config/gemfire.properties
+
+    ;;
+
+  stop)
+    if [ -f $PIDFILE ]; then
+      kill -9 `cat $PIDFILE` || true
+      rm -f $PIDFILE
+    fi
+
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+    ;;
+
+esac

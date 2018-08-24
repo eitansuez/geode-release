@@ -1,0 +1,16 @@
+---
+name: cacheserver
+
+templates:
+  ctl.erb: bin/ctl
+  gemfire.properties.erb: config/gemfire.properties
+
+packages:
+- openjdk-8
+- apache-geode
+
+consumes:
+- name: locator_info
+  type: locator
+
+properties: {}
