@@ -22,6 +22,7 @@ case $1 in
       --name=locator<%=spec.index%> \
       --dir=$RUN_DIR \
       --properties-file=$JOB_DIR/config/gemfire.properties
+      --J=-Djava.rmi.server.hostname=<%=spec.address%>
     ;;
 
   stop)
