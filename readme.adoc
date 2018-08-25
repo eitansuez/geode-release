@@ -1,3 +1,17 @@
 
 Learning http://bosh.io[BOSH] by building an apache geode release.
 
+To run tests, make sure you have ruby installed, then:
+
+[source,bash]
+----
+$ bundle install
+$ bundle exec rspec
+----
+
+To deploy, make sure you have a director configured, then:
+
+[source,bash]
+----
+$ bosh -d geode deploy manifests/geode.yml
+----
