@@ -3,8 +3,8 @@ name: geode
 
 releases:
 - name: geode
-  version: latest
-  #url: git+https://github.com/eitansuez/geode-release
+  version: 0.0.1
+  url: git+https://github.com/eitansuez/geode-release
 
 stemcells:
 - alias: default
