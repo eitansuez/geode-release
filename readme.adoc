@@ -1,7 +1,7 @@
 
-Learning http://bosh.io[BOSH] by building an apache geode release.
+Learning http://bosh.io[BOSH^] by building an apache geode release.
 
-To run tests, make sure you have ruby installed, then:
+To run tests, make sure you have a https://github.com/rbenv/rbenv[ruby installed^], then:
 
 [source,bash]
 ----
@@ -9,7 +9,7 @@ $ bundle install
 $ bundle exec rspec
 ----
 
-To deploy, make sure you have a director configured, then:
+To deploy, make sure you have a https://bosh.io/docs/bosh-lite/[director configured^], then:
 
 [source,bash]
 ----
