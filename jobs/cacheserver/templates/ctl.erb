@@ -8,30 +8,23 @@ JOB_DIR=/vcap/vcap/jobs/cacheserver
 RUN_DIR=/var/vcap/store/cacheserver
 
 LOG_DIR=/var/vcap/sys/log/cacheserver
-PIDFILE=$RUN_DIR/vf.gf.server.pid
+
+source /var/vcap/packages/openjdk-8/bosh/runtime.env
+source /var/vcap/packages/apache-geode/bosh/runtime.env
 
 case $1 in
 
   start)
     mkdir -p $RUN_DIR $LOG_DIR
     chown -R vcap:vcap $RUN_DIR $LOG_DIR
-
-    source /var/vcap/packages/openjdk-8/bosh/runtime.env
-    source /var/vcap/packages/apache-geode/bosh/runtime.env
-
     chpst -u vcap:vcap gfsh start server \
       --name=cacheserver<%=spec.index%> \
       --dir=$RUN_DIR \
       --properties-file=$JOB_DIR/config/gemfire.properties
-
     ;;
 
   stop)
-    if [ -f $PIDFILE ]; then
-      kill -9 `cat $PIDFILE` || true
-      rm -f $PIDFILE
-    fi
-
+    gfsh stop server --dir=$RUN_DIR
     ;;
 
   *)
