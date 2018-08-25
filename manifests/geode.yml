@@ -20,7 +20,7 @@ update:
 instance_groups:
 - name: locator
   azs: [z1,z2,z3]
-  instances: 2
+  instances: 1
   jobs:
   - name: locator
     release: geode
