@@ -1,0 +1,24 @@
+name: geode
+version: 0.0.1
+commit_hash: 4ceadb3
+uncommitted_changes: false
+jobs:
+- name: cacheserver
+  version: 0e6727d9d4d1d9bd683309db0cf76a6e6b338997
+  fingerprint: 0e6727d9d4d1d9bd683309db0cf76a6e6b338997
+  sha1: 55411a4a1311644f38bc78b044fb39f89bac8f03
+- name: locator
+  version: 05a14442e26a4e3800cb4b710388d380daff856f
+  fingerprint: 05a14442e26a4e3800cb4b710388d380daff856f
+  sha1: 6eecfef2772b55e8cdb76b0befc0c0798f0cfe97
+packages:
+- name: apache-geode
+  version: b32652d597647a2daee240e8e6e595d6b9ccc08c
+  fingerprint: b32652d597647a2daee240e8e6e595d6b9ccc08c
+  sha1: aae986f0e3b30a3434f9b130ea3648a6c7d8cf8f
+  dependencies: []
+- name: openjdk-8
+  version: 2d3d1ec9f37bcd93bfefc839ee159be28519b20a
+  fingerprint: 2d3d1ec9f37bcd93bfefc839ee159be28519b20a
+  sha1: 0801e3d340c536ce67b664ff033758f31270d693
+  dependencies: []
