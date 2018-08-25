@@ -20,7 +20,7 @@ update:
 instance_groups:
 - name: locator
   azs: [z1,z2,z3]
-  instances: 1
+  instances: 2
   jobs:
   - name: locator
     release: geode
@@ -31,7 +31,7 @@ instance_groups:
 
 - name: cacheserver
   azs: [z1,z2,z3]
-  instances: 1
+  instances: 3
   jobs:
   - name: cacheserver
     release: geode
