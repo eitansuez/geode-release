@@ -1,2 +1,3 @@
 locators=<%= link('locator_info').instances.map { |instance| instance.address + '[10334]' }.join(',') %>
+jmx-manager-hostname-for-clients=<%=spec.address%>
 log-file=/var/vcap/sys/log/locator/locator<%=spec.index%>.log
